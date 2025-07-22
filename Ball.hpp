@@ -6,7 +6,13 @@
 
 class Ball {
 public:
+    Ball() = default;
+    Ball(const Velocity& velocity, const Point& center, const Color& color,
+        const double& radius, const double& mass) :
+        ball_velocity_ {velocity}, ball_center_ {center}, ball_color_ {color},
+        ball_radius_ {radius}, ball_mass_ {mass} {};
     void setVelocity(const Velocity& velocity);
+    bool isValid() const;
     Velocity getVelocity() const;
     void draw(Painter& painter) const;
     void setCenter(const Point& center);

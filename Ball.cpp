@@ -2,6 +2,13 @@
 #include <cmath>
 
 /**
+ * Проверяет состояние объекта
+ */
+bool Ball::isValid() const{
+    return true; //!TODO: реализовать валидатор
+}
+
+/**
  * Задает скорость объекта
  * @param velocity новое значение скорости
  */
