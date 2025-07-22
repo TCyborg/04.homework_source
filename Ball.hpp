@@ -6,11 +6,11 @@
 
 class Ball {
 public:
-    Ball() = default;
-    Ball(const Velocity& velocity, const Point& center, const Color& color,
-        const double& radius, const double& mass) :
+    inline Ball() = default;
+    inline Ball(const Velocity& velocity, const Point& center, const Color& color,
+        const double& radius) :
         ball_velocity_ {velocity}, ball_center_ {center}, ball_color_ {color},
-        ball_radius_ {radius}, ball_mass_ {mass} {};
+        ball_radius_ {radius} {};
     void setVelocity(const Velocity& velocity);
     bool isValid() const;
     Velocity getVelocity() const;
@@ -24,5 +24,5 @@ private:
     Point ball_center_;
     Color ball_color_;
     double ball_radius_;
-    double ball_mass_;
+    double ball_mass = 5; //TODO константа массы шара
 };

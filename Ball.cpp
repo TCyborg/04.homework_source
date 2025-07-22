@@ -77,5 +77,5 @@ double Ball::getRadius() const {
  */
 double Ball::getMass() const {
     // TODO: место для доработки
-    return ball_mass_;
+    return ball_mass;
 }
